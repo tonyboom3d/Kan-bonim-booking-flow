@@ -1,0 +1,102 @@
+{
+  "name": "Booking",
+  "type": "object",
+  "properties": {
+    "full_name": {
+      "type": "string",
+      "description": "\u05e9\u05dd \u05de\u05dc\u05d0"
+    },
+    "email": {
+      "type": "string",
+      "description": "\u05d0\u05d9\u05de\u05d9\u05d9\u05dc"
+    },
+    "phone": {
+      "type": "string",
+      "description": "\u05d8\u05dc\u05e4\u05d5\u05df"
+    },
+    "participants": {
+      "type": "number",
+      "description": "\u05de\u05e1\u05e4\u05e8 \u05de\u05e9\u05ea\u05ea\u05e4\u05d9\u05dd"
+    },
+    "wood_type": {
+      "type": "string",
+      "enum": [
+        "recycled",
+        "new"
+      ],
+      "description": "\u05e1\u05d5\u05d2 \u05e2\u05e5"
+    },
+    "products": {
+      "type": "array",
+      "description": "\u05de\u05d5\u05e6\u05e8\u05d9\u05dd \u05e9\u05e0\u05d1\u05d7\u05e8\u05d5",
+      "items": {
+        "type": "object",
+        "properties": {
+          "product_id": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "price": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    "selected_slots": {
+      "type": "array",
+      "description": "\u05ea\u05d0\u05e8\u05d9\u05db\u05d9\u05dd \u05e9\u05e0\u05d1\u05d7\u05e8\u05d5",
+      "items": {
+        "type": "object",
+        "properties": {
+          "slot_id": {
+            "type": "string"
+          },
+          "date": {
+            "type": "string"
+          },
+          "time": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "total_price": {
+      "type": "number",
+      "description": "\u05de\u05d7\u05d9\u05e8 \u05db\u05d5\u05dc\u05dc"
+    },
+    "total_sessions": {
+      "type": "number",
+      "description": "\u05e1\u05d4\"\u05db \u05de\u05e4\u05d2\u05e9\u05d9\u05dd"
+    },
+    "notes": {
+      "type": "string",
+      "description": "\u05d4\u05e2\u05e8\u05d5\u05ea"
+    },
+    "instagram": {
+      "type": "string",
+      "description": "\u05d0\u05d9\u05e0\u05e1\u05d8\u05d2\u05e8\u05dd"
+    },
+    "marketing_consent": {
+      "type": "boolean",
+      "description": "\u05d0\u05d9\u05e9\u05d5\u05e8 \u05d3\u05d9\u05d5\u05d5\u05e8"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "paid",
+        "completed",
+        "cancelled"
+      ],
+      "description": "\u05e1\u05d8\u05d8\u05d5\u05e1 \u05d4\u05d6\u05de\u05e0\u05d4"
+    }
+  },
+  "required": [
+    "full_name",
+    "email",
+    "phone",
+    "participants"
+  ]
+}

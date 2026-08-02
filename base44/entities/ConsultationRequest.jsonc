@@ -1,0 +1,69 @@
+{
+  "name": "ConsultationRequest",
+  "type": "object",
+  "properties": {
+    "full_name": {
+      "type": "string",
+      "description": "\u05e9\u05dd \u05de\u05dc\u05d0"
+    },
+    "email": {
+      "type": "string",
+      "description": "\u05d0\u05d9\u05de\u05d9\u05d9\u05dc"
+    },
+    "phone": {
+      "type": "string",
+      "description": "\u05d8\u05dc\u05e4\u05d5\u05df"
+    },
+    "message": {
+      "type": "string",
+      "description": "\u05ea\u05d5\u05db\u05df \u05d4\u05e4\u05e0\u05d9\u05d9\u05d4"
+    },
+    "attachments": {
+      "type": "array",
+      "description": "\u05e7\u05d1\u05e6\u05d9\u05dd \u05de\u05e6\u05d5\u05e8\u05e4\u05d9\u05dd",
+      "items": {
+        "type": "string"
+      }
+    },
+    "request_type": {
+      "type": "string",
+      "enum": [
+        "consultation",
+        "custom_build"
+      ],
+      "description": "\u05e1\u05d5\u05d2 \u05d4\u05d1\u05e7\u05e9\u05d4"
+    },
+    "wood_preference": {
+      "type": "string",
+      "enum": [
+        "recycled",
+        "new",
+        "no_preference"
+      ],
+      "description": "\u05d4\u05e2\u05d3\u05e4\u05ea \u05e2\u05e5 (\u05dc\u05d1\u05e0\u05d9\u05d9\u05d4 \u05de\u05d5\u05ea\u05d0\u05de\u05ea)"
+    },
+    "dimensions": {
+      "type": "string",
+      "description": "\u05de\u05d9\u05d3\u05d5\u05ea (\u05dc\u05d1\u05e0\u05d9\u05d9\u05d4 \u05de\u05d5\u05ea\u05d0\u05de\u05ea)"
+    },
+    "marketing_consent": {
+      "type": "boolean",
+      "description": "\u05d0\u05d9\u05e9\u05d5\u05e8 \u05d3\u05d9\u05d5\u05d5\u05e8"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "new",
+        "in_progress",
+        "completed"
+      ],
+      "description": "\u05e1\u05d8\u05d8\u05d5\u05e1"
+    }
+  },
+  "required": [
+    "full_name",
+    "email",
+    "phone",
+    "message"
+  ]
+}
